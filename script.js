@@ -1,4 +1,27 @@
-function roundOne(){
+let computerScore = 0;
+let playerScore = 0;
+
+function game(){
+
+    while(computerScore < 3 && playerScore < 3){
+    round();
+
+    console.log('comp = ', computerScore, 'player = ', playerScore)
+
+    }
+    if (computerScore == 3){
+        console.log('Computer Wins!')
+    } else {
+            console.log('Player Wins')
+    }
+    
+
+}
+
+
+
+
+function round(){
     let computerSelection = getComputerChoice();
     let playerSelection = prompt('Enter Your Choice:').toUpperCase();
     switch (playerSelection){
@@ -6,14 +29,16 @@ function roundOne(){
             switch (computerSelection){
                 case 'ROCK':
                     console.log('Tie, try again');
-                    roundOne();
+                    break;
                 
                 case 'PAPER':
-                    console.log('Computer Wins');
+                    console.log('Computer wins a point');
+                    computerScore++
                     break;
 
                 case 'SCISSORS':
-                    console.log('Player Wins');
+                    console.log('Player wins a point');
+                    playerScore++
                     break;
             
             }
@@ -22,15 +47,17 @@ function roundOne(){
         case 'PAPER':
             switch (computerSelection){
                 case 'ROCK':
-                    console.log('Player Wins');
-                    roundOne();
+                    console.log('Player wins a point');
+                    playerScore++
+                    break;
                 
                 case 'PAPER':
                     console.log('Tie, try again');
                     break;
 
                 case 'SCISSORS':
-                    console.log('Computer Wins');
+                    console.log('Computer wins a point');
+                    computerScore++;
                     break;
 
             }
@@ -39,11 +66,13 @@ function roundOne(){
         case 'SCISSORS':
             switch (computerSelection){
                 case 'ROCK':
-                    console.log('Computer Wins');
-                    roundOne();
+                    console.log('Computer wins a point');
+                    computerScore++;
+                    break;
                 
                 case 'PAPER':
-                    console.log('Player Wins');
+                    console.log('Player wins a point');
+                    playerScore++;
                     break;
 
                 case 'SCISSORS':
@@ -56,7 +85,7 @@ function roundOne(){
 
         default:
             console.log('Invalid Input');
-            roundOne();
+            round();
     }
 
 

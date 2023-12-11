@@ -4,51 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
+    <script src="script.js"></script>
 </head>
 <body>
     <script>
+        game();
     </script>
 </body>
 </html>
 
 <!-- Pseudocode
 
-Call getComputerChoice();
-    Generate random number between 0,1,2
-    If random number = 0;
-        computerSelection = ROCK;
-    Else 
-        If random number = 1;
-        computerSelection = PAPER;
-        Else;
-            computerSelection = SCISSORS;
-
-    Return computerSelection.
-
-Call roundOne();
-    Call getComputerChoice();
-    print 'Enter Your Choice'
-    playerSelection = User Input.toUpperCase();
-
-    If playerSelection == computerSelection;
-        Print('Tie, play again')
-        Call roundOne()
-    Else
-        SWITCH playerSelection = ROCK and computerSelection = PAPER;
-            Print('Computer Wins');
-        SWITCH playerSelection = ROCK and computerSelection = SCISSORS;
-            Print('Player Wins')
-        SWITCH playerSelection = PAPER and computerSelection = ROCK;
-            Print('Player Wins');
-        SWITCH playerSelection = PAPER and computerSelection = Scissors;
-            Print('Computer Wins');
-        SWITCH playerSelection = Scissors and computerSelection = Rock;
-            Print('Computer Wins');
-        SWITCH playerSelection = Scissors and computerSelection = Paper;
-            Print('Player Wins');
-
-        
-
-
+Call game()
+    Loop Until computerScore or playerScore = 3:
+    round()
 
 -->
